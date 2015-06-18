@@ -109,22 +109,22 @@ ssh_keys:
 
 jenkins-slave::reprepro_updater_config: |
     [ubuntu_building]
-    architectures: amd64 armhf i386 source
-    distros: lucid maverick natty oneiric precise quantal raring saucy trusty utopic vivid
+    architectures: amd64 source
+    distros: trusty
     repository_path: /var/repos/ubuntu/building
     signing_key: E5944336
     upstream_config: /home/jenkins-slave/reprepro_config
 
     [ubuntu_testing]
-    architectures: amd64 armhf i386 source
-    distros: lucid maverick natty oneiric precise quantal raring saucy trusty utopic vivid
+    architectures: amd64 source
+    distros: trusty
     repository_path: /var/repos/ubuntu/testing
     signing_key: E5944336
     upstream_config: /home/jenkins-slave/reprepro_config
 
     [ubuntu_main]
-    architectures: amd64 armhf i386 source
-    distros: lucid maverick natty oneiric precise quantal raring saucy trusty utopic vivid
+    architectures: amd64 source
+    distros: trusty
     repository_path: /var/repos/ubuntu/main
     signing_key: E5944336
     upstream_config: /home/jenkins-slave/reprepro_config
@@ -135,9 +135,9 @@ jenkins-slave::reprepro_config:
         content: |
             name: ros_bootstrap
             method: http://repos.ros.org/repos/ros_bootstrap
-            suites: [lucid, maverick, natty, oneiric, precise, quantal, raring, saucy, trusty, utopic, vivid]
+            suites: [trusty]
             component: main
-            architectures: [i386, amd64, armel, armhf, source]
+            architectures: [amd64, source]
             # filter_formula: Package (% python* )
             # needed until we deploy the gpg key
             verify_release: blindtrust
