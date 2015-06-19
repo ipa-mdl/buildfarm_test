@@ -9,6 +9,7 @@ user::admin::name: admin
 
 user::admin::password_hash: '#jbcrypt:$2a$10$vmmqzRmcDHj1t9Ajgq5edekPD8cbpD./pBSGcYzia.OsIroOKjghm'
 
+timezone: 'Europe/Berlin'
 
 credentials::jenkins-slave::username: jenkins-slave
 credentials::jenkins-slave::id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
